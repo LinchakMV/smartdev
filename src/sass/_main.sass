@@ -1,0 +1,260 @@
+@font-face 
+    font-family: 'Circe'
+    src: url(../fonts/Circe-Bold.ttf)
+
+@font-face 
+    font-family: 'PT Sans'
+    src: url(../fonts/pt-sans.ttf)
+@font-face 
+    font-family: 'PT Sans bold'
+    src: url(../fonts/pt-sans-bold.ttf)
+@font-face 
+    font-family: 'Georgia Italic'
+    src: url(../fonts/GeorgiaItalic.ttf)
+   
+@mixin font($name, $weight, $size)
+    font-family: $name, sans-serif
+    font-weight: $weight
+    font-size: $size
+
+.block
+	margin: 0 auto
+	max-width: 1000px
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+
+.header
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	margin-top: 40px
+	margin-bottom: 28px
+	&__logo
+		h4
+			@include font('PT Sans', 400, 27px)
+			color: #18374b
+			margin-left: 20px
+			margin-top: 2px
+
+.free-veb
+	border-top: 1px solid #000000
+	text-align: center	
+	h1
+		@include font('Circe', 700, 34px)
+		text-transform: uppercase
+		color: #ff621f
+		margin-top: 45px
+	h3
+		@include font('Circe', 700, 30px)
+		text-transform: uppercase
+		color: #020001	
+		margin-top: 29px
+		margin-bottom: 20px
+		line-height: 1.25
+	&__button
+		@include font('PT Sans', 700, 30px)
+		text-decoration: none
+		padding: 16px 38px 15px 68px
+		background: #ff621f
+		color: #fff
+		border-bottom: 7px solid #f04941
+
+.card
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: flex-start
+	margin-top: 40px
+	max-width: 1000px
+	&__left
+		background: #ff621f
+		max-width: 500px
+		padding-bottom: 145px
+		height: 1276px
+	&__left-date
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: flex-start
+		margin-left: 20px
+		img
+			margin-top: 36px
+	&__left-day
+		color: #fff
+		text-transform: uppercase
+		margin-left: 34px
+		margin-top: 28px
+.day
+	&__week
+		@include font('Circe', 700, 30px)
+	&__month
+		@include font('Circe', 700, 36px)
+		margin-top: -8px
+	&__time
+		@include font('PT Sans', 400, 24px)
+		border-top: 3px dotted #fff
+		padding-top: 17px
+		width: 294px
+.card
+	&__left-spiker
+		text-align: center
+		margin-top: 50px
+		p
+			margin-top: 20px
+			margin-bottom: 14px
+			color: #fff
+			@include font('Georgia Italic', 400, 22px)
+		h2
+			text-transform: uppercase
+			color: #fff
+			@include font('PT Sans bold', 700, 22px)
+			line-height: 1.2
+	&__left-list
+		color: #fff
+		margin-top: 26px
+		margin-left: 84px
+		margin-right: 15px		
+		li
+			padding: 9px 0px 9px 2px
+			@include font('PT Sans', 400, 18px)
+			margin-bottom: 2px
+			letter-spacing: 0.003em
+.card
+	&__right
+		background: #eaeaea
+		color: #2b2e35
+		max-width: 500px
+		padding-left: 10px
+		height: 1276px
+	&__start
+		@include font('PT Sans bold', 700, 21px)
+		text-transform: uppercase
+		text-align: center
+		margin-top: 30px
+	&__info
+		@include font('PT Sans bold', 700, 24px)
+		text-align: start
+		font-size: 24px
+		text-transform: uppercase
+		margin-top: 27px
+		margin-left: 26px
+	&__right-list
+		margin-top: 62px
+		margin-left: 32px
+		margin-right: 30px
+		margin-bottom: 55px
+		span
+			@include font('PT Sans bold', 700, 24px)
+	&__right-list li:before
+		position: absolute
+		content: url('../img/correct.png')
+		margin-left: -30px
+		padding-right: 20px
+	&__right-list li
+		list-style-type: none
+		padding-left: 34px
+		@include font('PT Sans', 400, 24px)
+		line-height: 1.2
+		color: #2b2e35
+		margin-bottom: 30px
+	
+.timer
+	display: flex
+	justify-content: center
+	margin-top: 14px
+	margin-left: -12px
+	&__time
+		div
+			@include font('Circe', 700, 48px)
+			color: #fff
+			background: #2b2e35
+			border-radius: 10px
+			width: 68px
+			height: 68px
+			text-align: center
+			margin: 0 4px
+		p
+			@include font('Circe', 700, 14px)
+			text-align: center
+			margin-top: 8px
+
+.whom
+	margin-top: 48px
+	text-align: center
+	padding-bottom: 43px
+	&__format
+		@include font('Georgia Italic', 400, 24px)
+		span
+			font-size: 30px
+	&__button
+		margin-top: 48px
+		margin-left: -10px
+		@include font('PT Sans bold', 700, 36px)
+		color: #fff
+		background: #ff621f
+		padding: 5px 40px 7px 42px
+	&__answer
+		margin-top: 20px
+		@include font('PT Sans', 400, 36px)
+		color: #2b2e35
+		padding-bottom: 34px
+		border-bottom: 2px dotted #2b2e35
+		line-height: 1.2
+
+// FOOTER
+.f-block
+	background: url('../img/background0.png') no-repeat
+	display: flex
+	justify-content: flex-start
+	flex-direction: column
+	align-items: center
+
+.footer
+	max-width: 1004px
+	display: flex
+	justify-content: flex-start
+	flex-direction: column
+	align-items: flex-start
+	h2
+		@include font('PT Sans bold', 700, 36px)
+		text-align: center
+		padding-top: 9px
+		line-height: 1.24
+		padding-bottom: 24px
+	p
+		@include font('PT Sans', 400, 24px)
+		padding-bottom: 29px
+		line-height: 1.3em
+		span
+			@include font('PT Sans bold', 700, 27px)
+	&__business
+		font-size: 27px!important
+	&__collage
+		border: 6px solid #ff621f
+		margin-top: 12px
+		max-width: 1000px
+		margin-bottom: 22px
+	&__know
+		@include font('PT Sans', 400, 36px)
+	&__com
+		@include font('PT Sans bold', 700, 30px)
+		color: #2b2e35
+		margin-top: 55px
+	&__button
+		width: 1000px
+		height: 108px
+		background: #ff621f
+		color: #fff
+		border-bottom: 12px solid #f04941
+		@include font('PT Sans bold', 700, 48px)
+		margin-top: 85px
+
+.social
+	margin-top: 43px
+	margin-bottom: 54px
+	img
+		width: 42px
+		height: 42px

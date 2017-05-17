@@ -1,4 +1,5 @@
-#Demo (http://smart-dev.surge.sh/)
+##Demo (http://smart-dev.surge.sh/)
+
 #How to use
 
 Clone this repo and then in command line type:
